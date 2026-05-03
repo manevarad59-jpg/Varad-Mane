@@ -1,38 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Apr 28 10:41:41 2026
+Created on Sun May  3 11:54:37 2026
 
-@author: Varad
+@author: varad
 """
 
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Apr 28 10:40:17 2026
+from datetime import date
 
-@author: Varad
-"""
+today = date.today()
 
-import math
-
-def calculate_emi(p, annual_rate, years):
-   
-    r = annual_rate / (12 * 100)
-    n = years * 12
-   
-    numerator = p * r * math.pow(1 + r, n)
-    denominator = math.pow(1 + r, n) - 1
-   
-    emi = numerator / denominator
-    return emi
-
-
-principal = 50000      
-rate = 10.5            
-tenure = 2            
-
-emi_result = calculate_emi(principal, rate, tenure)
-
-print(f"Loan Amount: {principal}")
-print(f"Annual Interest Rate: {rate}%")
-print(f"Tenure: {tenure} years")
-print(f"Monthly EMI: {round(emi_result, 2)}")
+print("Today's Date:", today)
