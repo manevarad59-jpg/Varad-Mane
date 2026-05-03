@@ -1,23 +1,17 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Apr 28 10:44:19 2026
+Created on Sun May  3 11:56:17 2026
 
-@author: Varad
+@author: varad
 """
 
-import random
-import string
+import math
 
-def generate_otp(length=6):
-   
-    characters = string.digits
-   
-    otp = ''.join(random.choice(characters) for _ in range(length))
-   
-    return otp
+x1 = float(input("Enter x1: "))
+y1 = float(input("Enter y1: "))
+x2 = float(input("Enter x2: "))
+y2 = float(input("Enter y2: "))
 
-new_otp = generate_otp(6)
+distance = math.sqrt((x2 - x1)*2 + (y2 - y1)*2)
 
-print("--- Secure Authentication ---")
-print(f"Your mobile verification code is: {new_otp}")
-print("This code expires in 5 minutes.")
+print("Distance =", distance)
